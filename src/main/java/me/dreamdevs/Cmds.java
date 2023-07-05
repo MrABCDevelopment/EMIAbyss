@@ -1,7 +1,7 @@
-package me.lemurxd;
+package me.dreamdevs;
 
-import me.lemurxd.abyss.Abyss;
-import me.lemurxd.utils.Settings;
+import me.dreamdevs.abyss.Abyss;
+import me.dreamdevs.utils.Settings;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

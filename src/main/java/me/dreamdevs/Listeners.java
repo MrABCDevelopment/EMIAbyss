@@ -1,9 +1,9 @@
-package me.lemurxd;
+package me.dreamdevs;
 
-import me.lemurxd.abyss.Abyss;
-import me.lemurxd.abyss.Pages;
-import me.lemurxd.utils.Settings;
-import me.lemurxd.utils.VersionUtil;
+import me.dreamdevs.abyss.Abyss;
+import me.dreamdevs.abyss.Pages;
+import me.dreamdevs.utils.Settings;
+import me.dreamdevs.utils.VersionUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

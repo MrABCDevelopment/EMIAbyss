@@ -1,4 +1,4 @@
-package me.lemurxd.abyss;
+package me.dreamdevs.abyss;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

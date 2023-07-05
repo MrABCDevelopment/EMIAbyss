@@ -1,9 +1,9 @@
-package me.lemurxd;
+package me.dreamdevs;
 
-import me.lemurxd.abyss.Abyss;
-import me.lemurxd.abyss.Pages;
-import me.lemurxd.utils.Settings;
-import me.lemurxd.utils.VersionUtil;
+import me.dreamdevs.abyss.Abyss;
+import me.dreamdevs.abyss.Pages;
+import me.dreamdevs.utils.Settings;
+import me.dreamdevs.utils.VersionUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -28,8 +28,8 @@ public class Main extends JavaPlugin {
             Settings.rows = 6;
         }
         Abyss.setRows(Settings.rows);
-        warntime = System.currentTimeMillis()/1000+Settings.timer;
-        warntimeclose = System.currentTimeMillis()/1000+ Settings.timerend+Settings.timer;
+        warntime = System.currentTimeMillis()/1000+ Settings.timer;
+        warntimeclose = System.currentTimeMillis()/1000+ Settings.timerend+ Settings.timer;
         this.abysstask();
         this.warntask();
     }
@@ -44,12 +44,12 @@ public class Main extends JavaPlugin {
             Integer current = Math.toIntExact(System.currentTimeMillis() / 1000);
             for(Integer i : Settings.warnslist.keySet()) {
                 if(i.intValue() == ((warntime-current))) {
-                    Bukkit.broadcastMessage(""+Settings.warnslist.get(i));
+                    Bukkit.broadcastMessage(""+ Settings.warnslist.get(i));
                 }
             }
             for(Integer i : Settings.warnscloselist.keySet()) {
                 if(i.intValue() == ((warntimeclose-current))) {
-                    Bukkit.broadcastMessage(""+Settings.warnscloselist.get(i));
+                    Bukkit.broadcastMessage(""+ Settings.warnscloselist.get(i));
                 }
             }
         }, 20, 20);
@@ -78,8 +78,8 @@ public class Main extends JavaPlugin {
                 Abyss.getInv()[0].clear();
                 Abyss.getInv()[0] = null;
                 abysstask();
-                warntime = System.currentTimeMillis()/1000+Settings.timer;
-                warntimeclose = System.currentTimeMillis()/1000+Settings.timerend+Settings.timer;
+                warntime = System.currentTimeMillis()/1000+ Settings.timer;
+                warntimeclose = System.currentTimeMillis()/1000+ Settings.timerend+ Settings.timer;
                 Bukkit.broadcastMessage(Settings.otchlanclearbroadcast);
             }
         }, Settings.timerend*20);

@@ -1,6 +1,6 @@
-package me.lemurxd.utils;
+package me.dreamdevs.utils;
 
-import me.lemurxd.Main;
+import me.dreamdevs.Main;
 
 import java.util.HashMap;
 

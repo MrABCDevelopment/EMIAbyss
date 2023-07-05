@@ -1,6 +1,6 @@
-package me.lemurxd.abyss;
+package me.dreamdevs.abyss;
 
-import me.lemurxd.utils.Settings;
+import me.dreamdevs.utils.Settings;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
