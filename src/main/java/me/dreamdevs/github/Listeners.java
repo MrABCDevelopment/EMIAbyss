@@ -1,14 +1,13 @@
-package me.dreamdevs;
+package me.dreamdevs.github;
 
-import me.dreamdevs.abyss.Abyss;
-import me.dreamdevs.abyss.Pages;
-import me.dreamdevs.utils.Settings;
-import me.dreamdevs.utils.VersionUtil;
+import me.dreamdevs.github.abyss.Abyss;
+import me.dreamdevs.github.abyss.Pages;
+import me.dreamdevs.github.utils.Settings;
+import me.dreamdevs.github.utils.VersionUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 
 public class Listeners implements Listener {
 
@@ -61,10 +60,4 @@ public class Listeners implements Listener {
             }
         }
     }
-
-    public void onclick(PlayerInteractEvent e) {
-        e.getItem().getType().name();
-    }
-
-
 }

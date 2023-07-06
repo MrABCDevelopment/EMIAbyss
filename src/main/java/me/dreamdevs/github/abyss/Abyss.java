@@ -1,6 +1,6 @@
-package me.dreamdevs.abyss;
+package me.dreamdevs.github.abyss;
 
-import me.dreamdevs.utils.Settings;
+import me.dreamdevs.github.utils.Settings;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;

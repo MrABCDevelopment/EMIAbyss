@@ -1,6 +1,6 @@
-package me.dreamdevs.abyss;
+package me.dreamdevs.github.abyss;
 
-import me.dreamdevs.utils.Settings;
+import me.dreamdevs.github.utils.Settings;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -25,7 +25,6 @@ public class Pages {
                     for(Map.Entry<Map<UUID, ItemStack>, Integer> mapEntry : Cleaner.getItemList().entrySet()) {
                         Cleaner.getItemList().replace(mapEntry.getKey(), amount -= 64);
                     }
-                    //Cleaner.getItemList().replace(is, amount -= 64);
                     ++slot;
                     continue;
                 }
@@ -42,7 +41,7 @@ public class Pages {
     }
 
     private static void createNewPage() {
-        System.out.println("Tworze nowa strone...");
+        System.out.println("Create new page...");
         Abyss.getInv()[++Pages.page] = Bukkit.createInventory(null, Abyss.getRows() * 9, Settings.otchlanguiname);
         slot = 0;
         if (changer == null) {
@@ -55,9 +54,9 @@ public class Pages {
     public static void prepareItemLores() {
         ItemMeta im = changer.getItemMeta();
         ArrayList<String> lore = new ArrayList<String>();
-        lore.add("§bKliknij §aLPM§b aby przejsc na kolejna strone.");
-        lore.add("§bKliknij §aPPM§b aby przejsc na poprzednia strone.");
-        im.setDisplayName("§eZmien strone");
+        lore.add(Settings.itemloreup);
+        lore.add(Settings.itemloredown);
+        im.setDisplayName(Settings.itemname);
         im.setLore(lore);
         changer.setItemMeta(im);
     }

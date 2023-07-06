@@ -1,4 +1,4 @@
-package me.dreamdevs.abyss;
+package me.dreamdevs.github.abyss;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

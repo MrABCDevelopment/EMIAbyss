@@ -1,25 +1,25 @@
 #When abyss is closed.
 Message-deny: "Otchlan jest aktualnie zamknieta."
-#When the player doesn't have permission to open the abyss.
+#When player don't have permission to open abyss
 Message-otchlanpermissiondeny: "Nie masz uprawnien do otworzenia otchlani!"
-#When the last page of the abyss doesn't exist.
+#When last page of abyss doasn't exist.
 Message-last-page-doasnt-exist: "Poprzednia strona nie istnieje."
-#When the next page of the abyss doesn't exist.
+#When next page of abyss doasn't exist.
 Message-next-page-doasnt-exist: "Nastepna strona nie istnieje."
-#When the player doesn't have permission to open the next page.
+#When plays doasn't have permission to open next page
 Message-page-permission: "You don't have permission to pages!"
-#When the abyss finally closed.
+#When abyss finally closed
 Broadcast-otchlanclear: "Otchlan zostala zamknieta."
-#When the abyss finally opened
+#When abyss finally opened
 Broadcast: "Otchlan pochlonela {AMOUNT} itemow. Wpisz /otchlan aby otworzyc!"
-#Name of the Abyss GUI.
+#Name of abyss gui
 Otchlanguiname: "Otchlan"
 #Abyss warns IN SECONDS
 #For example you have
 #5:
 #  Message: "5 seconds"
-#It means that when it takes 5 seconds to open the abyss, the message below the number will be shown.
-#It works exactly the same for close warnings.
+#it means, when its 5 seconds TO OPEN abyss, message bellow number will shown.
+#its work exacly the same in close warns
 Abyss-warns:
   5:
     Message: "OMG 5 SECONDS TO THE ABYSS OPEN"
@@ -27,7 +27,7 @@ Abyss-warns:
     Message: "ITS COMING! 10 SECONDS TO THE ABYSS OPEN"
   15:
     Message: "ITS CLOSER AND CLOSER! 15 SECONDS TO THE ABYSS OPEN"
-#Same as upper, but to close the abyss.
+#Same as upper, but to CLOSE abyss.
 Abyss-close-warns:
   5:
     Message: "ITS 5 SECONDS TO THE ABYSS CLOSE!"
@@ -35,13 +35,9 @@ Abyss-close-warns:
     Message: "now its 10 seconds! [to the abyss close of course]"
   15:
     Message: "15 seconds and abyss closee"
-#This represents how often the Abyss opens.
+#This represents how often the Abyss is opening
 timer: 60
-#How long will the abyss be open [The timer has restarted after closed.]
+#How long the abyss be open. [timer has restart after closed.]
 Time-end: 20
 #How many rows gui have.
 rows: 5
-#button for pages
-Lore-up: "LPM to next page"
-Lore-down: "PPM to previous page"
-item-name: "Change page"

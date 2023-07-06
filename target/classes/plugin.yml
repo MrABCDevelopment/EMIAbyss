@@ -1,0 +1,6 @@
+name: Otchlan
+version: 1.0
+author: lemurxd_
+main: org.example.Main
+commands:
+  abyss:

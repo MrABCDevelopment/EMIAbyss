@@ -1,9 +1,9 @@
-package me.dreamdevs;
+package me.dreamdevs.github;
 
-import me.dreamdevs.abyss.Abyss;
-import me.dreamdevs.abyss.Pages;
-import me.dreamdevs.utils.Settings;
-import me.dreamdevs.utils.VersionUtil;
+import me.dreamdevs.github.abyss.Abyss;
+import me.dreamdevs.github.abyss.Pages;
+import me.dreamdevs.github.utils.Settings;
+import me.dreamdevs.github.utils.VersionUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,7 +20,7 @@ public class Main extends JavaPlugin {
         new VersionUtil();
         Pages.prepareItemLores();
         Bukkit.getPluginManager().registerEvents(new Listeners(), this);
-        this.getCommand("otchlan").setExecutor(new Cmds());
+        this.getCommand("abyss").setExecutor(new Cmds());
         if (Settings.rows < 2) {
             Settings.rows = 2;
         }
@@ -44,7 +44,6 @@ public class Main extends JavaPlugin {
             Integer current = Math.toIntExact(System.currentTimeMillis() / 1000);
             for(Integer i : Settings.warnslist.keySet()) {
                 if(i.intValue() == ((warntime-current))) {
-                    Bukkit.broadcastMessage(""+ Settings.warnslist.get(i));
                 }
             }
             for(Integer i : Settings.warnscloselist.keySet()) {

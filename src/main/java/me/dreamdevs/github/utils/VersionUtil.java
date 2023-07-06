@@ -1,4 +1,4 @@
-package me.dreamdevs.utils;
+package me.dreamdevs.github.utils;
 
 import lombok.Getter;
 import org.bukkit.Bukkit;

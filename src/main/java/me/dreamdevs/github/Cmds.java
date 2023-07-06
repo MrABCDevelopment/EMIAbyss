@@ -1,7 +1,7 @@
-package me.dreamdevs;
+package me.dreamdevs.github;
 
-import me.dreamdevs.abyss.Abyss;
-import me.dreamdevs.utils.Settings;
+import me.dreamdevs.github.abyss.Abyss;
+import me.dreamdevs.github.utils.Settings;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

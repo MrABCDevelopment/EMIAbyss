@@ -1,6 +1,6 @@
 name: Otchlan
-version: 1.0
-author: lemurxd_
-main: org.example.Main
+version: 1.0.0
+author: dreamdevs
+main: me.dreamdevs.github.Main
 commands:
   abyss:
