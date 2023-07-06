@@ -44,6 +44,7 @@ public class Main extends JavaPlugin {
             Integer current = Math.toIntExact(System.currentTimeMillis() / 1000);
             for(Integer i : Settings.warnslist.keySet()) {
                 if(i.intValue() == ((warntime-current))) {
+                    Bukkit.broadcastMessage(""+ Settings.warnslist.get(i));
                 }
             }
             for(Integer i : Settings.warnscloselist.keySet()) {
