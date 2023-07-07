@@ -1,43 +1,47 @@
 #When abyss is closed.
-Message-deny: "Otchlan jest aktualnie zamknieta."
-#When player don't have permission to open abyss
-Message-otchlanpermissiondeny: "Nie masz uprawnien do otworzenia otchlani!"
-#When last page of abyss doasn't exist.
-Message-last-page-doasnt-exist: "Poprzednia strona nie istnieje."
-#When next page of abyss doasn't exist.
-Message-next-page-doasnt-exist: "Nastepna strona nie istnieje."
-#When plays doasn't have permission to open next page
+Message-deny: "The Abyss is closed."
+#When the player doesn't have permission to open the abyss.
+Message-otchlanpermissiondeny: "You don't have permission to open the abyss."
+#When the last page of the abyss doesn't exist.
+Message-last-page-doasnt-exist: "The previous page doesn't exist."
+#When the next page of the abyss doesn't exist.
+Message-next-page-doasnt-exist: "The next page doesn't exist."
+#When the player doesn't have permission to open the next page.
 Message-page-permission: "You don't have permission to pages!"
-#When abyss finally closed
-Broadcast-otchlanclear: "Otchlan zostala zamknieta."
-#When abyss finally opened
-Broadcast: "Otchlan pochlonela {AMOUNT} itemow. Wpisz /otchlan aby otworzyc!"
-#Name of abyss gui
-Otchlanguiname: "Otchlan"
+#When the abyss finally closed.
+Broadcast-otchlanclear: "Abyss closed."
+#When the abyss finally opened
+Broadcast: "Abyss get {AMOUNT} items. Write /abyss to get them!"
+#Name of the Abyss GUI.
+Otchlanguiname: "Abyss"
 #Abyss warns IN SECONDS
 #For example you have
 #5:
 #  Message: "5 seconds"
-#it means, when its 5 seconds TO OPEN abyss, message bellow number will shown.
-#its work exacly the same in close warns
+#It means that when it takes 5 seconds to open the abyss, the message below the number will be shown.
+#It works exactly the same for close warnings.
 Abyss-warns:
   5:
     Message: "OMG 5 SECONDS TO THE ABYSS OPEN"
   10:
     Message: "ITS COMING! 10 SECONDS TO THE ABYSS OPEN"
   15:
-    Message: "ITS CLOSER AND CLOSER! 15 SECONDS TO THE ABYSS OPEN"
-#Same as upper, but to CLOSE abyss.
+    Message: "ITS GETTING CLOSER AND CLOSER! 15 SECONDS TO THE ABYSS OPEN"
+#Same as upper, but to close the abyss.
 Abyss-close-warns:
   5:
-    Message: "ITS 5 SECONDS TO THE ABYSS CLOSE!"
+    Message: "5 SECONDS TO THE ABYSS CLOSE!"
   10:
     Message: "now its 10 seconds! [to the abyss close of course]"
   15:
-    Message: "15 seconds and abyss closee"
-#This represents how often the Abyss is opening
+    Message: "15 seconds and abyss close"
+#This represents how often the Abyss opens.
 timer: 60
-#How long the abyss be open. [timer has restart after closed.]
+#How long will the abyss be open [The timer has restarted after closed.]
 Time-end: 20
 #How many rows gui have.
 rows: 5
+#button for pages
+Lore-up: "LPM to next page"
+Lore-down: "PPM to previous page"
+item-name: "Change page"

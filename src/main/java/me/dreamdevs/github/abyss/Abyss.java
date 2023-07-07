@@ -1,6 +1,6 @@
-package me.dreamdevs.abyss;
+package me.dreamdevs.github.abyss;
 
-import me.dreamdevs.utils.Settings;
+import me.dreamdevs.github.utils.Settings;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class Abyss {
-    private static Map<Player, Integer> map = new HashMap<Player, Integer>();
+    private static final Map<Player, Integer> map = new HashMap<Player, Integer>();
     private static int rows = 5;
     public static Inventory[] inv = new Inventory[200];
 

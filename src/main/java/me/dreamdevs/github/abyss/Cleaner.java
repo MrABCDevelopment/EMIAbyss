@@ -1,4 +1,4 @@
-package me.dreamdevs.abyss;
+package me.dreamdevs.github.abyss;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -12,10 +12,11 @@ import java.util.Map;
 import java.util.UUID;
 
 public class Cleaner {
-    private static Map<Map<UUID, ItemStack>, Integer> itemy = new HashMap<Map<UUID, ItemStack>, Integer>();
+
+    private static Map<Map<UUID, ItemStack>, Integer> items = new HashMap<Map<UUID, ItemStack>, Integer>();
 
     public static void clear() {
-        itemy.clear();
+        items.clear();
         for (World w : Bukkit.getWorlds()) {
             for(Entity e: w.getEntities()) {
                 if (!(e instanceof Item)) continue;
@@ -30,7 +31,7 @@ public class Cleaner {
                         is2.setAmount(1);
                         Map<UUID, ItemStack> itemStackMap = new HashMap<>();
                         itemStackMap.put(i2.getUniqueId(), is2);
-                        itemy.put(itemStackMap,1);
+                        items.put(itemStackMap,1);
                         licznik++;
                     }
                     e.remove();
@@ -39,10 +40,10 @@ public class Cleaner {
                     is.setAmount(1);
                     Map<UUID, ItemStack> itemStackMap = new HashMap<>();
                     itemStackMap.put(i2.getUniqueId(), is);
-                    if (itemy.containsKey(itemStackMap)) {
-                        itemy.replace(itemStackMap, amount += itemy.get(is).intValue());
+                    if (items.containsKey(itemStackMap)) {
+                        items.replace(itemStackMap, amount += items.get(is).intValue());
                     } else {
-                        itemy.put(itemStackMap, amount);
+                        items.put(itemStackMap, amount);
                     }
                     e.remove();
                 }
@@ -50,7 +51,7 @@ public class Cleaner {
         }
     }
 
-    public static HashMap<Map<UUID, ItemStack>, Integer> getItemList() {
-        return new HashMap<Map<UUID, ItemStack>, Integer>(itemy);
+    public static Map<Map<UUID, ItemStack>, Integer> getItemList() {
+        return items;
     }
 }

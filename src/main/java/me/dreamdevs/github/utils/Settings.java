@@ -1,6 +1,6 @@
-package me.dreamdevs.utils;
+package me.dreamdevs.github.utils;
 
-import me.dreamdevs.Main;
+import me.dreamdevs.github.Main;
 
 import java.util.HashMap;
 
@@ -12,6 +12,9 @@ public class Settings {
     public static String otchlanbroadcast1;
     public static String otchlanguiname;
     public static String permissionpages;
+    public static String itemloreup;
+    public static String itemloredown;
+    public static String itemname;
     public static HashMap<Integer, String> warnslist = new HashMap<>();
     public static HashMap<Integer, String> warnscloselist = new HashMap<>();
     public static String otchlanclearbroadcast;
@@ -24,6 +27,9 @@ public class Settings {
         warnslist.clear();
         warnscloselist.clear();
         otchlandenymessage = plugin.getConfig().getString("Message-deny").replace("&", "§");
+        itemloreup = plugin.getConfig().getString("Lore-up").replace("&", "§");
+        itemloredown = plugin.getConfig().getString("Lore-down").replace("&", "§");
+        itemname = plugin.getConfig().getString("item-name").replace("&", "§");
         otchlanpermissiondenymessage = plugin.getConfig().getString("Message-otchlanpermissiondeny").replace("&", "§");
         otchlanlastpagedontexist = plugin.getConfig().getString("Message-last-page-doasnt-exist").replace("&", "§");
         otchlannextpagedontexist = plugin.getConfig().getString("Message-next-page-doasnt-exist").replace("&", "§");

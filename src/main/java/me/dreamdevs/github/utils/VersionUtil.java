@@ -1,12 +1,11 @@
-package me.dreamdevs.utils;
+package me.dreamdevs.github.utils;
 
 import lombok.Getter;
 import org.bukkit.Bukkit;
 
 public class VersionUtil {
 
-    private @Getter
-    static VersionUtil instance;
+    private @Getter static VersionUtil instance;
 
     public VersionUtil() {
         instance = this;
