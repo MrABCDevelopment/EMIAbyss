@@ -11,7 +11,6 @@ import java.util.Map;
 import java.util.UUID;
 
 public class Pages {
-
     private static ItemStack changer = new ItemStack(Material.NETHER_STAR, 1);
     private static int page = 0;
     private static int slot = 0;
@@ -42,6 +41,7 @@ public class Pages {
     }
 
     private static void createNewPage() {
+        System.out.println("Create new page...");
         Abyss.getInv()[++Pages.page] = Bukkit.createInventory(null, Abyss.getRows() * 9, Settings.otchlanguiname);
         slot = 0;
         if (changer == null) {
