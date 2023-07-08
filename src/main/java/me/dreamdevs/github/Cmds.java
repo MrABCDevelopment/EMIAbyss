@@ -17,6 +17,10 @@ public class Cmds implements CommandExecutor {
                 return true;
             } else if (args.length == 1 && args[0].equalsIgnoreCase("reload") && sender.hasPermission("otchlan.admin")) {
                 new Settings(Main.getInstance());
+                Main.warntime = System.currentTimeMillis()/1000+ Settings.timer;
+                Main.warntimeclose = System.currentTimeMillis()/1000+ Settings.timerend+ Settings.timer;
+                Main.getInstance().abysstask();
+                Main.getInstance().warntask();
                 sender.sendMessage(ChatColor.GREEN+"Done!");
                 return true;
             }

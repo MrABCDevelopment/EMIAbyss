@@ -12,13 +12,12 @@ import java.util.UUID;
 
 public class Abyss {
     private static final Map<Player, Integer> map = new HashMap<Player, Integer>();
-    private static int rows = 5;
     public static Inventory[] inv = new Inventory[200];
 
     public static void open() {
         Pages.reset();
         Cleaner.clear();
-        Abyss.inv[0] = Bukkit.createInventory(null, rows * 9, Settings.otchlanguiname);
+        Abyss.inv[0] = Bukkit.createInventory(null, Settings.rows * 9, Settings.otchlanguiname);
         Map<Map<UUID, ItemStack>, Integer> items = Cleaner.getItemList();
         int amount = 0;
         for (Map<UUID, ItemStack> maps : items.keySet()) {
@@ -35,11 +34,11 @@ public class Abyss {
     }
 
     public static int getRows() {
-        return rows;
+        return Settings.rows;
     }
 
     public static void setRows(int a) {
-        rows = a;
+        Settings.rows = a;
     }
 
     public static Map<Player, Integer> getMap() {

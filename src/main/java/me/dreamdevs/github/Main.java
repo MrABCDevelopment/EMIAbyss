@@ -28,10 +28,12 @@ public class Main extends JavaPlugin {
             Settings.rows = 6;
         }
         Abyss.setRows(Settings.rows);
-        warntime = System.currentTimeMillis()/1000+ Settings.timer;
-        warntimeclose = System.currentTimeMillis()/1000+ Settings.timerend+ Settings.timer;
-        this.abysstask();
-        this.warntask();
+        Bukkit.getScheduler().runTaskLater(this, () -> {
+            warntime = System.currentTimeMillis()/1000+ Settings.timer;
+            warntimeclose = System.currentTimeMillis()/1000+ Settings.timerend+ Settings.timer;
+            this.abysstask();
+            this.warntask();
+        }, 40);
     }
 
 
@@ -39,7 +41,7 @@ public class Main extends JavaPlugin {
         return instance;
     }
 
-    private void warntask() {
+    public void warntask() {
         Bukkit.getScheduler().runTaskTimer(this, () -> {
             Integer current = Math.toIntExact(System.currentTimeMillis() / 1000);
             for(Integer i : Settings.warnslist.keySet()) {
@@ -55,14 +57,14 @@ public class Main extends JavaPlugin {
         }, 20, 20);
     }
 
-    private void abysstask() {
+    public void abysstask() {
         Bukkit.getScheduler().runTaskLater(this, () -> {
             Abyss.open();
             abyssclosetask();
         }, Settings.timer*20);
     }
 
-    private void abyssclosetask() {
+    public void abyssclosetask() {
         Bukkit.getScheduler().runTaskLater(this, () -> {
             for (Player all : Bukkit.getOnlinePlayers()) {
                 if (all.getOpenInventory() != null && all.getOpenInventory().getTitle().equals(Settings.otchlanguiname)) {

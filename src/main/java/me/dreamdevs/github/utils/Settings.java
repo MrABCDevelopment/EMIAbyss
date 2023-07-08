@@ -1,6 +1,10 @@
 package me.dreamdevs.github.utils;
 
 import me.dreamdevs.github.Main;
+import me.dreamdevs.github.abyss.Abyss;
+import me.dreamdevs.github.abyss.Pages;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 
 import java.util.HashMap;
 
@@ -24,6 +28,17 @@ public class Settings {
 
     public Settings(Main plugin) {
         plugin.reloadConfig();
+        Bukkit.getScheduler().cancelTasks(Main.getInstance());
+        if(!(Abyss.getInv()[0] == null)) {
+            for (Player all : Bukkit.getOnlinePlayers()) {
+                if (all.getOpenInventory() != null && all.getOpenInventory().getTitle().equals(Settings.otchlanguiname)) {
+                    all.closeInventory();
+                }
+            }
+            Pages.reset();
+            Abyss.getInv()[0].clear();
+            Abyss.getInv()[0] = null;
+        }
         warnslist.clear();
         warnscloselist.clear();
         otchlandenymessage = plugin.getConfig().getString("Message-deny").replace("&", "§");
