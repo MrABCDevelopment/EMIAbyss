@@ -6,6 +6,7 @@ import me.dreamdevs.github.abyss.Pages;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Settings {
@@ -21,6 +22,7 @@ public class Settings {
     public static String itemname;
     public static HashMap<Integer, String> warnslist = new HashMap<>();
     public static HashMap<Integer, String> warnscloselist = new HashMap<>();
+    public static ArrayList<String> blacklistedworlds = new ArrayList<>();
     public static String otchlanclearbroadcast;
     public static int timer;
     public static int rows;
@@ -57,6 +59,9 @@ public class Settings {
         }
         for(String s : plugin.getConfig().getConfigurationSection("Abyss-close-warns").getKeys(false)) {
             warnscloselist.put(Integer.parseInt(s), plugin.getConfig().getString("Abyss-close-warns." + s + ".Message").replace("&", "§"));
+        }
+        for(String s : plugin.getConfig().getStringList("blacklist-worlds")) {
+            blacklistedworlds.add(s);
         }
         timer = plugin.getConfig().getInt("timer");
         rows = plugin.getConfig().getInt("rows");

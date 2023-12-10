@@ -1,5 +1,6 @@
 package me.dreamdevs.github.abyss;
 
+import me.dreamdevs.github.utils.Settings;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -8,6 +9,7 @@ import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
 
@@ -18,6 +20,14 @@ public class Cleaner {
     public static void clear() {
         items.clear();
         for (World w : Bukkit.getWorlds()) {
+            Iterator<String> iter = Settings.blacklistedworlds.iterator();
+            while(iter.hasNext()) {
+                String blacklistedWorld = iter.next();
+                Bukkit.broadcastMessage(w.getName() + " / " + blacklistedWorld);
+                if(blacklistedWorld.equalsIgnoreCase(w.getName())) {
+                    return;
+                }
+            }
             for(Entity e: w.getEntities()) {
                 if (!(e instanceof Item)) continue;
                 Item i2 = (Item) e;

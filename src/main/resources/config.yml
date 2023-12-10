@@ -1,12 +1,14 @@
 #When abyss is closed.
 Message-deny: "The Abyss is closed."
 #When the player doesn't have permission to open the abyss.
+#Permission: abyss.open
 Message-otchlanpermissiondeny: "You don't have permission to open the abyss."
 #When the last page of the abyss doesn't exist.
 Message-last-page-doasnt-exist: "The previous page doesn't exist."
 #When the next page of the abyss doesn't exist.
 Message-next-page-doasnt-exist: "The next page doesn't exist."
 #When the player doesn't have permission to open the next page.
+#Permission: abyss.pages
 Message-page-permission: "You don't have permission to pages!"
 #When the abyss finally closed.
 Broadcast-otchlanclear: "Abyss closed."
@@ -45,3 +47,6 @@ rows: 5
 Lore-up: "LPM to next page"
 Lore-down: "PPM to previous page"
 item-name: "Change page"
+#In what world is the abyss not supposed to absorb items
+blacklist-worlds:
+  - 'asd'
