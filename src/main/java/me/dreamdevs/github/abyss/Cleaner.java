@@ -23,7 +23,6 @@ public class Cleaner {
             Iterator<String> iter = Settings.blacklistedworlds.iterator();
             while(iter.hasNext()) {
                 String blacklistedWorld = iter.next();
-                Bukkit.broadcastMessage(w.getName() + " / " + blacklistedWorld);
                 if(blacklistedWorld.equalsIgnoreCase(w.getName())) {
                     return;
                 }
